@@ -14,4 +14,8 @@ export const hashFile = async(fileName) => {
         console.log(hash.digest('hex')  );
      })
 
+     readStream.on('error', (error) => {
+        console.error(`Error reading file for hashing: ${error.message}`);
+    });
+
 }

@@ -1,5 +1,5 @@
 import path from 'node:path';
-import { changeDirectory, listFiles, presentWorkingDirectory } from './navigationFunctions.js';
+import { changeDirectory, listFiles, presentWorkingDirectory, goUpDirectory} from './navigationFunctions.js';
 
 export const handleNavigationCommand = (command, args) => {
     switch(command) {
@@ -13,6 +13,9 @@ export const handleNavigationCommand = (command, args) => {
             listFiles().then(files => {
                 console.table(files);
             })
+            break;
+        case 'up':
+            goUpDirectory();
             break;
     }
 }

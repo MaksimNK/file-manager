@@ -1,4 +1,4 @@
-const COMMANDS_FS = {
+export const COMMANDS_FS = {
     CAT: 'cat',
     ADD: 'add',
     RN: 'rn',
@@ -6,21 +6,23 @@ const COMMANDS_FS = {
     MV: 'mv',
     RM: 'rm'
 };
-const COMMANDS_OS = {
-   OS: 'os'
+
+export const COMMANDS_OS = {
+    OS: 'os'
 };
-const COMMANDS_HASH = {
+
+export const COMMANDS_HASH = {
     HASH: 'hash', 
-}
-const COMMANDS_NAVIGATE =  {
+};
+
+export const COMMANDS_NAVIGATE = {
     CD: 'cd',
     PWD: 'pwd',
-    LS: 'ls'
+    LS: 'ls',
+    UP: 'up'
 };
-const COMMANDS_COMPRESS = {
+
+export const COMMANDS_COMPRESS = {
     COMPRESS: 'compress',
     DECOMPRESS: 'decompress'
-}
-
-
-module.exports = {COMMANDS_FS, COMMANDS_OS, COMMANDS_NAVIGATE, COMMANDS_HASH, COMMANDS_COMPRESS};
+};

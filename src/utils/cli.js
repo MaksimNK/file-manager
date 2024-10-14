@@ -17,6 +17,11 @@ export const readCLI = () => {
         const upperCommand = command.toUpperCase();
         
 
+        if (upperCommand === 'EXIT') {
+            console.log('Exiting the File Manager. Goodbye!');
+            process.exit(0);
+        }
+
         switch (true) {
             case COMMANDS_FS.hasOwnProperty(upperCommand):
                 await handleFsCommand(command, args);
@@ -34,7 +39,7 @@ export const readCLI = () => {
                 await handleCompressCommand(command, args);
                 break;
             default:
-                console.log('lox');
+                console.log('Invalid Command');
                 break;
             }
         console.log(`You are currently in ${getCurrentDirectory()}`);
@@ -42,6 +47,6 @@ export const readCLI = () => {
 
 
           
-//process.exit(0);
+
     
 } 
